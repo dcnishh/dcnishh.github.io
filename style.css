@@ -151,13 +151,13 @@ section.panels {
   margin-top: 2rem;
 }
 
-/* // Paragraph text inside the about panels: left-aligned so it reads easily. */
-.panels .body-text {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-top: 1rem;
-  text-align: left;
+section.panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
 }
+
 /* // RESPONSIVE: fewer columns on smaller screens so nothing gets squashed.
       Tablet = 2 columns, phone = 1 column. */
 @media (max-width: 800px) { nav.panels { grid-template-columns: repeat(2, 1fr); } }
