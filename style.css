@@ -78,7 +78,7 @@ p { margin-top: 0.8rem; }
 .about-text { text-align: left; }
 
 /* // FOOTER */
-footer { color: var(--grey); font-size: 0.85rem; padding: 4rem 0 2rem; }
+footer { color: var(--grey); font-size: 0.85rem; padding: 0.85rem 0 2rem; }
 
 /* // WIDE: lets the landing page grow wider so three panels fit side by side. */
 main.wide { max-width: 960px; }
@@ -162,3 +162,24 @@ section.panels {
       Tablet = 2 columns, phone = 1 column. */
 @media (max-width: 800px) { nav.panels { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { nav.panels { grid-template-columns: 1fr; } }
+
+//LINKS: LinkedIn and Contacts, separated by an "x".
+.links {
+  margin-top: 2rem;
+  font-weight: 700;              /* // bold */
+}
+.links a {
+  color: var(--white);
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--orange);
+  transition: 0.25s;
+}
+.links a:hover {
+  color: var(--green);
+  border-bottom-color: var(--green);
+}
+.links .sep {
+  color: var(--white);           /* // was grey, now white */
+  margin: 0 0.8rem;
+}
