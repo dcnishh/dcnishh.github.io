@@ -1,0 +1,102 @@
+<!doctype html>
+<!-- // This line tells the browser "this is a modern HTML5 page". -->
+<html lang="en">
+  <head>
+    <!-- // charset lets the browser display all characters correctly. -->
+    <meta charset="UTF-8" />
+    <!-- // viewport makes the page fit properly on phones. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- // The text shown on the browser tab. "Domus" = home (Latin). -->
+    <title>Domus 2</title>
+    <!-- // Connects this page to our stylesheet (the design file). -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- // main holds everything in the middle of the page. -->
+   <main class="wide">
+      <!-- // Your profile photo. Put your picture in the "images" folder and name it profile.jpg.
+           alt describes the picture for screen readers. -->
+      <img class="profile" src="images/profile2.jpeg" alt="Portrait of me" />
+
+      <!-- // Your name. Replace YOUR NAME. -->
+      <h1>Dcnishh</h1>
+
+      <!-- // A short Latin tagline with its meaning below it. -->
+      <p class="tagline">Semper discens</p>
+      <p class="meaning">"Always learning"</p>
+
+      <!-- // The directory (navigation menu). Each link opens another page.
+           Ego = I/me, Opera = works, Libri = books, Nexus = connection.
+           Opera, Libri and Nexus are planned for later steps. -->
+      <!-- // PANELS: each <a> is one clickable box. The whole box is the link. -->
+<nav class="panels">
+
+  <a class="panel" href="about.html">
+    <h2>Ego</h2>                                   <!-- // title -->
+    <p class="meaning">(about me)</p>              <!-- // English meaning of the title -->
+    <p class="latin">Cognosce te ipsum</p>         <!-- // Latin description -->
+    <p class="meaning">"Know thyself"</p>          <!-- // its translation -->
+    <p class="source">Delphic maxim</p>            <!-- // where the idea comes from -->
+  </a>
+
+  <a class="panel" href="#">
+    <h2>Opera</h2>
+    <p class="meaning">(works)</p>
+    <p class="latin">Labor omnia vincit</p>
+    <p class="meaning">"Work conquers all"</p>
+    <p class="source">After Virgil, Georgics</p>
+  </a>
+
+  <a class="panel" href="#">
+    <h2>Studia</h2>
+    <p class="meaning">(skills &amp; learning)</p>
+    <p class="latin">Docendo discimus</p>
+    <p class="meaning">"We learn by teaching"</p>
+    <p class="source">Latin proverb, after Seneca</p>
+  </a>
+
+  <a class="panel" href="#">
+    <h2>Libri</h2>
+    <p class="meaning">(books)</p>
+    <p class="latin">Nusquam est qui ubique est</p>
+    <p class="meaning">"He who is everywhere is nowhere"</p>
+    <p class="source">Seneca, Epistulae Morales</p>
+  </a>
+
+  <a class="panel" href="#">
+    <h2>Principia</h2>
+    <p class="meaning">(principles)</p>
+    <p class="latin">Entia non sunt multiplicanda praeter necessitatem</p>
+    <p class="meaning">"Don't add complexity without need"</p>
+    <p class="source">Occam's razor, attributed to William of Ockham</p>
+  </a>
+
+  <a class="panel" href="#">
+    <h2>Nexus</h2>
+    <p class="meaning">(contact)</p>
+    <p class="latin">Audi alteram partem</p>
+    <p class="meaning">"Listen to the other side"</p>
+    <p class="source">Latin legal maxim</p>
+  </a>
+
+</nav>
+
+<!-- // DEDICATION: a quiet closing statement under the panels. -->
+<section class="dedication">
+  
+  <p class="latin">Per quinque annos, fidelis officio.</p>            <!-- // Latin line -->
+  <p class="meaning">"For five years, faithful to duty."</p>         <!-- // its translation -->
+  <p class="note">
+    Five years of steady dedication to keeping people and systems running,
+    and still learning every day.
+  </p>                                                                <!-- // plain English version -->
+</section>
+    </main>
+    <!-- // Footer at the bottom of the page. -->
+    <footer>
+      Per aspera ad astra
+      <span class="meaning">("through hardships to the stars")</span>
+    </footer>
+  </body>
+</html>
