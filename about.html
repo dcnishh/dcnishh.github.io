@@ -25,7 +25,7 @@
       <p class="meaning">"Who am I?"</p>
 
       <!-- // Three panels: present, past, future. Same look as the landing page. -->
-<section class="panels about-panels">
+<section class="panels about-panels about-single">
 
   <div class="panel">
     <h2>Praesens</h2>
@@ -36,23 +36,42 @@
     </p>
   </div>
 
+</section>
+
+<!-- // PRAETERITUM + FUTURUM: hidden for now (Draft A has one information panel).
+     Remove the comment markers around this block to bring them back.
+<section class="panels about-panels">
   <div class="panel">
     <h2>Praeteritum</h2>
     <p class="meaning">(the past)</p>
-    <p class="body-text">
-      To be completed
-    </p>
+    <p class="body-text">To be completed</p>
   </div>
-
   <div class="panel">
     <h2>Futurum</h2>
     <p class="meaning">(the future)</p>
-    <p class="body-text">
-            To be completed
-    </p>
+    <p class="body-text">To be completed</p>
   </div>
-
 </section>
+-->
+
+<!-- // ACHIEVEMENTS: a strip you swipe or scroll sideways. Each .cert is one certificate.
+     Until the scans are ready, the dashed placeholders below hold their place. -->
+<h2 class="section-title">Testimonia</h2>
+<p class="meaning">(achievements &amp; certificates)</p>
+
+<div class="cert-strip">
+  <div class="cert placeholder">Certificate 1<br><span class="meaning">coming soon</span></div>
+  <div class="cert placeholder">Certificate 2<br><span class="meaning">coming soon</span></div>
+  <div class="cert placeholder">Certificate 3<br><span class="meaning">coming soon</span></div>
+  <div class="cert placeholder">Certificate 4<br><span class="meaning">coming soon</span></div>
+  <div class="cert placeholder">Certificate 5<br><span class="meaning">coming soon</span></div>
+  <div class="cert placeholder">Certificate 6<br><span class="meaning">coming soon</span></div>
+
+  <!-- // WHEN A SCAN IS READY: save it in the Images folder, then replace one placeholder with:
+  <a class="cert" href="Images/cert1.jpg"><img src="Images/cert1.jpg" alt="Certificate 1 name"></a>
+  Tapping it opens the full-size file. For a PDF, link to it: href="Images/cert1.pdf" -->
+</div>
+<p class="meaning swipe-hint">Swipe or scroll sideways &rarr;</p>
     </main>
 
     <footer>Ars longa, vita brevis <span class="meaning">("art is long, life is short")</span></footer>
