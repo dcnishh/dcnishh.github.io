@@ -39,7 +39,7 @@ main {
   height: 180px;     /* // change this to the SAME number, so it stays a circle */
   border-radius: 50%;
   object-fit: cover;               /* // crops your photo neatly to fit the circle */
-    object-position: 70% 70%;   /* // first number = left/right, second number = up/down */
+    object-position: 50% 45%;   /* // first number = left/right, second number = up/down */
   border: 3px solid var(--green);
   box-shadow: 0 0 25px rgba(57, 255, 20, 0.35);   /* // soft neon glow */
   margin-bottom: 1.5rem;
@@ -144,6 +144,7 @@ nav.panels {
 .panels .panel p { margin-top: 0; }
 /* // ABOUT PANELS: same grid as the landing page, but on a <section>. */
 section.panels {
+  
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 1fr;
@@ -247,3 +248,57 @@ section.panels.compact {
   .competencies .label { flex-basis: 100%; }
 }
 .panels.compact .source { margin-top: 1rem; }
+
+/* ============================================================
+   HOME PAGE: BIGGER PANELS (nav.panels.large in index.html)
+   Change the numbers below to make the panels bigger or smaller.
+   ============================================================ */
+nav.panels.large {
+  gap: 1.6rem;                      /* // space between panels */
+  margin-top: 3rem;
+}
+.panels.large .panel {
+  min-height: 500px;                /* // panel height: raise to make taller */
+  padding: 2.5rem 1.6rem;           /* // inner space: top/bottom, left/right */
+}
+.panels.large .icon { font-size: 3.2rem; margin-bottom: 0.6rem; }
+.panels.large .panel h2 { font-size: 2.4rem; }
+.panels.large .meaning { font-size: 1rem; }
+.panels.large .latin { font-size: 1.2rem; margin-top: 1.4rem; }
+.panels.large .source { font-size: 0.85rem; margin-top: 1rem; }
+
+/* // DEDICATION + LINKS: sit closer to the panels and the footer. */
+.dedication { margin-top: 2rem; }
+.dedication + .links { margin-top: 1.5rem; }
+
+/* // PHONE: bigger panels are tall, so keep them a bit shorter on small screens. */
+@media (max-width: 520px) {
+  .panels.large .panel { min-height: 300px; padding: 2rem 1.2rem; }
+}
+
+/* ============================================================
+   OPERA PAGE: PANEL HEIGHT (opera.html only)
+   Home page panels are 500px tall. Opera panels are kept shorter
+   so the four panels sit close to the footer.
+   Change the numbers below to make them taller or shorter.
+   ============================================================ */
+section.panels.opera-panels {
+  gap: 1.2rem;                      /* // space between panels */
+  margin-top: 2.5rem;               /* // space between the heading and the panels */
+}
+section.panels.opera-panels .panel {
+  min-height: 200px;                /* // panel height: raise to make taller (home page = 500px) */
+  padding: 1.6rem 1.2rem;           /* // inner space: top/bottom, left/right */
+}
+/* // On tall screens the footer sits at the bottom of the window. To avoid a big empty gap,
+      the panels stretch downwards to fill the free space, so they always end next to the footer. */
+main.wide:has(.opera-panels) {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.5rem;
+}
+section.panels.opera-panels { flex: 1; }
+
+@media (max-width: 520px) {
+  section.panels.opera-panels .panel { min-height: 150px; }
+}
