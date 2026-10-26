@@ -187,7 +187,7 @@ section.panels {
 
 
 /* ============================================================
-   OPERA PAGES (opera.html and opera-2024.html)
+   OPERA PAGE (opera.html): timeline + job details
    ============================================================ */
 
 /* // TIMELINE PANELS: two columns on the Opera page, so four panels sit as a 2 x 2 grid.
@@ -290,14 +290,9 @@ section.panels.opera-panels .panel {
   min-height: 200px;                /* // panel height: raise to make taller (home page = 500px) */
   padding: 1.6rem 1.2rem;           /* // inner space: top/bottom, left/right */
 }
-/* // On tall screens the footer sits at the bottom of the window. To avoid a big empty gap,
-      the panels stretch downwards to fill the free space, so they always end next to the footer. */
-main.wide:has(.opera-panels) {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 0.5rem;
-}
-section.panels.opera-panels { flex: 1; }
+/* // The Opera page is now long (all jobs on one page), so the panels no longer need to stretch
+      to reach the footer. Just keep a little bottom space. */
+main.wide:has(.opera-panels) { padding-bottom: 0.5rem; }
 
 @media (max-width: 520px) {
   section.panels.opera-panels .panel { min-height: 150px; }
@@ -361,3 +356,82 @@ section.panels.about-single {
 }
 
 .swipe-hint { font-size: 0.8rem; margin-top: 0; }
+
+
+/* ============================================================
+   OPERA PAGE: 6 PANELS + PIPELINE (timeline)
+   ============================================================ */
+
+/* // SIX PANELS: 3 columns x 2 rows on desktop, 2 columns on tablet, 1 column on phone. */
+section.panels.opera-panels { grid-template-columns: repeat(3, 1fr); }
+.opera-panels .panel .latin { margin-top: 0.8rem; }
+
+/* // STATIC PANEL: not a link, so it does not lift on hover. It only changes the border colour. */
+.panels .panel.static:hover { transform: none; }
+/* // CURRENT PANEL (the newest): orange border so it stands out. */
+.panels .panel.current { border-color: var(--orange); }
+
+/* // PIPELINE: six steps on one line. A gradient line (green -> orange) runs behind the dots. */
+.pipeline {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  position: relative;
+  max-width: 1000px;
+  margin: 2.5rem auto 0;
+  padding: 0;
+}
+.pipeline::before {                 /* // the line, from the middle of the first dot to the last dot */
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: calc(100% / 12);
+  right: calc(100% / 12);
+  height: 2px;
+  background: linear-gradient(90deg, var(--green), var(--orange));
+}
+.pipeline .step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.8rem 0.6rem 0;
+  text-align: center;
+}
+.pipeline .step::before {           /* // the dot on the line */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--black);
+  border: 2px solid var(--green);
+}
+.pipeline .step.current::before {   /* // newest dot: filled orange with a glow */
+  background: var(--orange);
+  border-color: var(--orange);
+  box-shadow: 0 0 12px rgba(255, 69, 0, 0.7);
+}
+.pipeline .year    { color: var(--green); font-weight: 700; }
+.pipeline .company { color: var(--white); font-size: 0.9rem; line-height: 1.35; }
+.pipeline .role    { color: var(--grey); font-size: 0.8rem; font-style: italic; line-height: 1.35; }
+
+/* // RESPONSIVE */
+@media (max-width: 800px) {
+  section.panels.opera-panels { grid-template-columns: repeat(2, 1fr); }
+  /* // PIPELINE on tablet / phone: becomes a vertical line on the left, one step per row. */
+  .pipeline { grid-template-columns: 1fr; max-width: 420px; }
+  .pipeline::before {
+    top: 8px; bottom: 8px; left: 7px; right: auto;
+    width: 2px; height: auto;
+    background: linear-gradient(180deg, var(--green), var(--orange));
+  }
+  .pipeline .step { padding: 0 0 1.6rem 2.2rem; text-align: left; }
+  .pipeline .step::before { top: 0.3rem; left: 0; transform: none; }
+}
+@media (max-width: 520px) {
+  section.panels.opera-panels { grid-template-columns: 1fr; }
+}

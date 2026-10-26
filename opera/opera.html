@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- // Opera = works. This file lives in the opera/ folder, so links to the main site start with "../". Layout: 6 panels + 6 panels + a timeline "pipeline" underneath.
+     Public-safe: company names, designations and years only. No long descriptions. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- // Tab name: "Opera" = works (Latin). -->
+    <title>Opera</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <main class="wide" id="top">
+      <!-- // The same menu as the other pages. class="active" marks the page we are on. -->
+      <nav>
+        <a href="../index.html">Domus <span class="meaning">(home)</span></a>
+        <a href="../about.html">Ego <span class="meaning">(about)</span></a>
+        <a href="opera.html" class="active">Opera <span class="meaning">(works)</span></a>
+        <a href="#">Nexus <span class="meaning">(contact)</span></a>
+      </nav>
+
+      <!-- // Page heading -->
+      <h1 style="margin-top: 3rem">Opera</h1>
+      <p class="meaning">(works)</p>
+      <p class="tagline">Labor omnia vincit</p>
+      <p class="meaning">"Work conquers all"</p>
+
+      <!-- // 6 PANELS: oldest first, newest last (read left to right, then next row).
+           Each panel = years (big), exact months (grey), designation (white italic), company (orange).
+           Each panel is a link (href="...") that opens that period's page. All period pages use
+           opera-2024.html as their template. To edit a panel, change the text inside it. -->
+      <section class="panels opera-panels">
+
+        <a class="panel" href="pages/opera-2020.html">
+          <span class="icon">&#x1F6E0;&#xFE0F;</span>
+          <h2>2020 &ndash; 2021</h2>
+          <p class="meaning">(July 2020 &ndash; July 2021)</p>
+          <p class="latin">Technical Assistant IT (Contract)</p>
+          <p class="source">Awanbiru Sdn Bhd</p>
+        </a>
+
+        <a class="panel" href="pages/opera-2021.html">
+          <span class="icon">&#x1F3ED;</span>
+          <h2>2021 &ndash; 2022</h2>
+          <p class="meaning">(Sept 2021 &ndash; July 2022)</p>
+          <p class="latin">Production Operator</p>
+          <p class="source">Sony EMCS</p>
+        </a>
+
+        <a class="panel" href="pages/opera-2022.html">
+          <span class="icon">&#x1F5A5;&#xFE0F;</span>
+          <h2>2022 &ndash; 2023</h2>
+          <p class="meaning">(Aug 2022 &ndash; Aug 2023)</p>
+          <p class="latin">Resident Engineer IT (Contract)</p>
+          <p class="source">Night Electronics (M) Sdn Bhd</p>
+        </a>
+
+        <a class="panel" href="pages/opera-2023.html">
+          <span class="icon">&#x1F33F;</span>
+          <h2>2023 &ndash; 2024</h2>
+          <p class="meaning">(Sept 2023 &ndash; Feb 2024)</p>
+          <p class="latin">Career Break</p>
+          <p class="source">Family care</p>
+        </a>
+
+        <a class="panel" href="pages/opera-2024-early.html">
+          <span class="icon">&#x1F4CB;</span>
+          <h2>2024</h2>
+          <p class="meaning">(March 2024 &ndash; Nov 2024)</p>
+          <p class="latin">Technical Assistant (Contract)</p>
+          <p class="source">Material Options Corp Sdn Bhd</p>
+        </a>
+
+        <a class="panel current" href="pages/opera-2024.html">
+          <span class="icon">&#x1F4BC;</span>
+          <h2>2024 &ndash; Current</h2>
+          <p class="meaning">(Nov 2024 &ndash; Recent)</p>
+          <p class="latin">IT System &amp; Workstation Assistant</p>
+          <p class="source">Enterprise IT &amp; Workplace Technology</p>
+        </a>
+
+      </section>
+
+      <!-- // PIPELINE: the same six steps as a simple timeline line, oldest on the left.
+           Each step = years, company, designation. The last step (class="current") glows orange.
+           On phones the line turns vertical. -->
+      <h2 class="section-title">Iter</h2>
+      <p class="meaning">(the journey)</p>
+      <ol class="pipeline">
+        <li class="step">
+          <span class="year">2020 &ndash; 2021</span>
+          <span class="company">Awanbiru Sdn Bhd</span>
+          <span class="role">Technical Assistant IT (Contract)</span>
+        </li>
+        <li class="step">
+          <span class="year">2021 &ndash; 2022</span>
+          <span class="company">Sony EMCS</span>
+          <span class="role">Production Operator</span>
+        </li>
+        <li class="step">
+          <span class="year">2022 &ndash; 2023</span>
+          <span class="company">Night Electronics (M) Sdn Bhd</span>
+          <span class="role">Resident Engineer IT (Contract)</span>
+        </li>
+        <li class="step">
+          <span class="year">2023 &ndash; 2024</span>
+          <span class="company">Career Break</span>
+          <span class="role">Family care</span>
+        </li>
+        <li class="step">
+          <span class="year">2024</span>
+          <span class="company">Material Options Corp Sdn Bhd</span>
+          <span class="role">Technical Assistant (Contract)</span>
+        </li>
+        <li class="step current">
+          <span class="year">2024 &ndash; Current</span>
+          <span class="company">Enterprise IT &amp; Workplace Technology</span>
+          <span class="role">IT System &amp; Workstation Assistant</span>
+        </li>
+      </ol>
+    </main>
+
+    <footer>Labor ipse voluptas <span class="meaning">("work itself is a pleasure")</span></footer>
+  </body>
+</html>
